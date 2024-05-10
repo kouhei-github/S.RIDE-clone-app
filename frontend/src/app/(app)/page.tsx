@@ -6,8 +6,15 @@ import {useAddress} from '@/hooks/useAddress'
 import {useState} from 'react'
 import {Pannel} from '@/components/Pannel'
 
-export default function Home() {
-  const {address, setAddress} = useAddress()
+export default function Home({
+  params,
+  searchParams,
+}: {
+  params: { slug: string };
+  searchParams: { address: string | undefined };
+}) {
+  const name = typeof searchParams.address === "undefined" ? "" : searchParams.address
+  const {address, setAddress} = useAddress(name)
 
   const [destination, setDestination] = useState("目的地 指定無し")
   return (

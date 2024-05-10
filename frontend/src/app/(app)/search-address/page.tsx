@@ -1,10 +1,13 @@
-"use client"
-import {useSearchParams} from 'next/navigation'
 import RedirectButton from '@/components/RedirectButton'
 
-export default function Home(){
-  const query = useSearchParams()
-  const address = query.get("name")
+const SearchAddress = ({
+ params,
+ searchParams,
+}: {
+  params: { slug: string };
+  searchParams: { name: string | undefined };
+}) => {
+  const address =searchParams.name!
   return (
       <div>
         <RedirectButton address={address!} />
@@ -12,3 +15,4 @@ export default function Home(){
   )
 }
 
+export default SearchAddress
