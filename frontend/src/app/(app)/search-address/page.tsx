@@ -2,7 +2,7 @@
 import {useSearchParams} from 'next/navigation'
 import RedirectButton from '@/components/RedirectButton'
 
-const SearchAddress = () => {
+export default function Home(){
   const query = useSearchParams()
   const address = query.get("name")
   return (
@@ -12,4 +12,3 @@ const SearchAddress = () => {
   )
 }
 
-export default SearchAddress
