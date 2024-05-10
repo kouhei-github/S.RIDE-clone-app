@@ -1,0 +1,27 @@
+.rangeslider .rangeslider__handle {
+    background: url('../../public/arrow.png') no-repeat center center !important;
+    background-size: cover  !important; /* 画像がハンドルのサイズに合わせて拡縮されるようにします */
+    border: none; /* 既存のボーダーを削除します */
+    cursor: pointer; /* マウスカーソルをポインターにします */
+}
+
+.rangeslider-horizontal .rangeslider__handle:after {
+    content: none !important;
+}
+
+.rangeslider-horizontal .rangeslider__handle {
+    width: 40px !important;
+    height: 40px!important;
+}
+
+.rangeslider-horizontal {
+    height: 44px !important;
+}
+
+.rangeslider-horizontal .rangeslider__fill {
+    background-color: yellow !important;
+}
+
+.rangeslider {
+    background: none !important;
+}
